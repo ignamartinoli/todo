@@ -24,6 +24,8 @@ services:
   web:
     command: go run server.go
     image: golang
+    networks:
+      - app-network
     ports:
       - "3000:3000"
     volumes:
